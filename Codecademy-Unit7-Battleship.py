@@ -31,7 +31,7 @@ ship_col = random_col(board)
 #print ship_col
 2
 # Everything from here on should go in your for loop!
-# Be sure to indent four spaces!
+# Be sure to indent four spaces! test
 
 turn = 0
 
