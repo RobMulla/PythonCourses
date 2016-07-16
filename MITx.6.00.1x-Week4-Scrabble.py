@@ -1,6 +1,6 @@
 # This is a scrabble game what allows users to see the best solutions
 # This project was completed for MITx 6.00.1x
-# Some code was provided 
+# Some code was provided
 
 def getWordScore(word, n):
     """
