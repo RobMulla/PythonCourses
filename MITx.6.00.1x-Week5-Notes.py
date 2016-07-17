@@ -39,3 +39,7 @@ def search3(L, e):
         return False
     else:
         return search3(L[1:], e)
+
+n = 500
+print 0.001*(n**5)
+print 20000*(n**2)
