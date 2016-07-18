@@ -266,17 +266,20 @@ class CiphertextMessage(Message):
         '''
 
         testshift = 0
+        correctwordsprev = 0
+        bestshift = 0
+
         while testshift < 26:
             decryptedmsg = self.apply_shift(testshift)
             splitdecryptedmsg = decryptedmsg.split(' ')
 
             # print splitdecryptedmsg
             correctwords = 0
-            correctwordsprev = 0
+
             for word in splitdecryptedmsg:
                 if word in self.valid_words:
                     correctwords += 1
-
+            # print testshift, correctwords, bestshift
             if correctwords > correctwordsprev:
                 bestshift = testshift
                 correctwordsprev = correctwords
@@ -288,6 +291,7 @@ class CiphertextMessage(Message):
 
 
 """
+Test code below
 #  Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
 print 'Expected Output: jgnnq'
@@ -305,14 +309,14 @@ def decrypt_story():
     return ciphered.decrypt_message()
 
 print decrypt_story()
-
-testmessage = PlaintextMessage('Hello my name is testing',10)
-print testmessage.text
-testency = testmessage.get_message_text_encrypted()
-print testmessage.get_message_text_encrypted()
-print "Shifted Message:" + testmessage.apply_shift()
-
-getanswer = CiphertextMessage(testency)
-print getanswer.decrypt_message()
-
-print 'test'
+#
+# testmessage = PlaintextMessage('Hello my name is testing',10)
+# print testmessage.text
+# testency = testmessage.get_message_text_encrypted()
+# print testmessage.get_message_text_encrypted()
+# print "Shifted Message:" + testmessage.apply_shift(10)
+#
+# getanswer = CiphertextMessage(testency)
+# print getanswer.decrypt_message()
+#
+# print 'test'
