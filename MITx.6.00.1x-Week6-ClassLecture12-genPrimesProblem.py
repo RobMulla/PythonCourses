@@ -8,23 +8,33 @@ prime numbers on successive calls to its next() method: 2, 3, 5, 7, 11, ..."""
 
 
 def genPrimes():
-    primes = [2]
-    x = 2
+    primes = []
+    x = 1
+    yield 2
+    x += 1
+    primes.append(x)
     while True:
-        print "is true"
+        print "primes list is:  " + str(primes)
         for p in primes:
             if (x % p) == 0:
-                print "if statement true"
-                print x
-            else:
-                yield x
-                print "if statement false"
-                primes.append(x)
-                print "primes are: " + str(primes)
-        x+= 1
+                x += 1
+        yield x
+        primes.append(x)
+        x += 1
+
 
 
 prime = genPrimes()
 
-for n in genPrimes():
-    print n
+print str(prime.next()) + "    should be 2"
+print str(prime.next()) + "    should be 3"
+print str(prime.next()) + "    should be 5"
+print str(prime.next()) + "    should be 7"
+print str(prime.next()) + "    should be 11"
+print str(prime.next()) + "    should be 13"
+print str(prime.next()) + "    should be 17"
+print str(prime.next()) + "    should be 19"
+
+
+
+
