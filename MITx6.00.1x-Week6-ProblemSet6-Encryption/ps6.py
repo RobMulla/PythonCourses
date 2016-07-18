@@ -314,3 +314,5 @@ print "Shifted Message:" + testmessage.apply_shift()
 
 getanswer = CiphertextMessage(testency)
 print getanswer.decrypt_message()
+
+print 'test'
