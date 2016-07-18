@@ -35,6 +35,3 @@ print str(prime.next()) + "    should be 13"
 print str(prime.next()) + "    should be 17"
 print str(prime.next()) + "    should be 19"
 
-
-sdfasdf
-
