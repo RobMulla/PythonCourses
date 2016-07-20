@@ -1,8 +1,10 @@
 # This program was developed as a course project for MITx 6.00.1x - Intro to Computer Science in Python
-# The program defines classes and subclasses to encrypt and decrypt a message
-# using the Caesar Cipher method
+# The program consists a class 'Messages' and subclasses 'PlaintextMessage' and 'CiphertextMessage'
+# Used to encrypt and decrypt a message using the Caesar Cipher method
 # The structure of the program was provided, including some functions and methods noted below
 # The implementation of the major methods were written by me.
+
+# This and other examples of my coding work can by found on my github.com/robmulla
 
 import string
 
