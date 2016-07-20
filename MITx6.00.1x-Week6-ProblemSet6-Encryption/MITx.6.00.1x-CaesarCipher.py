@@ -1,15 +1,18 @@
 """
+This is Rob Mulla's code sample for UC, Berkeley's MIDS degree
+
 This program was part of a course project
 for MITx: 6.00.1x Introduction to Computer Science and Programming Using Python
 
-It and other projects can be found on my github account: https://github.com/RobMulla
+This and other projects I've worked on can be found on my github account: https://github.com/RobMulla
 
 The class 'Messages' and two subclasses 'PlaintextMessage' and 'CiphertextMessage' are used
 to encrypt and decrypt a message using the Caesar Cipher method
 
-The program structure and some functions were provided as course material
-The implementation of the major methods were written by me and noted in the comments
-as # MY CODE BELOW
+The program structure and some functions and comments were provided as course material
+My code is noted with the # MY CODE BELOW comment
+
+Additional files words.txt and story.txt are required to run the program on a sample message
 """
 
 import string
@@ -256,7 +259,7 @@ class CiphertextMessage(Message):
             self.valid_words (list, determined using helper function load_words)
         '''
 
-        # MY CODE HERE
+        # MY CODE BELOW
         Message.__init__(self, text)
         self.text = text
         self.message_text = Message.get_message_text(self)
