@@ -4,9 +4,8 @@ for MITx: 6.00.1x Introduction to Computer Science and Programming Using Python
 
 It and other projects can be found on my github account: https://github.com/RobMulla
 
-It does some simple encryption using the Caesar Cipher method
-
-The class Messages and two subclasses PlaintextMessage and CiphertextMessage are used
+The class 'Messages' and two subclasses 'PlaintextMessage' and 'CiphertextMessage' are used
+to encrypt and decrypt a message using the Caesar Cipher method
 
 The program structure and some functions were provided as course material
 The implementation of the major methods were written by me and noted in the comments
