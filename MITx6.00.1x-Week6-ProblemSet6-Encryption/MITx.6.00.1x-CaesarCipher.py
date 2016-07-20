@@ -1,8 +1,17 @@
-# This program was developed as a course project for MITx 6.00.1x - Intro to Computer Science in Python
-# The program defines classes and subclasses to encrypt and decrypt a message
-# using the Caesar Cipher method
-# The structure of the program was provided, including some functions and methods noted below
-# The implementation of the major methods were written by me.
+"""
+This program was part of a course project
+for MITx: 6.00.1x Introduction to Computer Science and Programming Using Python
+
+It and other projects can be found on my github account: https://github.com/RobMulla
+
+It does some simple encryption using the Caesar Cipher method
+
+The class Messages and two subclasses PlaintextMessage and CiphertextMessage are used
+
+The program structure and some functions were provided as course material
+The implementation of the major methods were written by me and noted in the comments
+as # MY CODE BELOW
+"""
 
 import string
 
@@ -287,7 +296,7 @@ class CiphertextMessage(Message):
                 if word in self.valid_words:
                     correctwords += 1
             # print testshift, correctwords, bestshift
-            if correctwords > correctwordsprev:
+            if correctwords > correctwordsprev:  # if its the best solution so far save it off
                 bestshift = testshift
                 correctwordsprev = correctwords
 
@@ -308,7 +317,7 @@ ciphertext = CiphertextMessage('jgnnq')
 print 'Expected Output:', (24, 'hello')
 print 'Actual Output:', ciphertext.decrypt_message()
 
-
+# Example decryping a story
 def decrypt_story():
     ciphered = CiphertextMessage(get_story_string())
     return ciphered.decrypt_message()
