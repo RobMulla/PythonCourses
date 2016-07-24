@@ -10,17 +10,15 @@ prime numbers on successive calls to its next() method: 2, 3, 5, 7, 11, ..."""
 def genPrimes():
     primes = []
     x = 1
-    yield 2
-    x += 1
-    primes.append(x)
     while True:
-        print "primes list is:  " + str(primes)
+        x += 1
         for p in primes:
             if (x % p) == 0:
-                x += 1
-        yield x
-        primes.append(x)
-        x += 1
+                break
+        else:
+            primes.append(x)
+            yield x
+
 
 
 

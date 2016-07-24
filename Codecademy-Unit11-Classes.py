@@ -1,4 +1,15 @@
-# This file contains code written for Unit 11 an Introduction to Classes
+"""
+This file contains additional Rob Mulla's code sample for UC, Berkeley's MIDS degree
+
+The code was written while taking a Python introduction course on www.codecademy.com
+It is from Unit 11: an Introduction to Classes
+
+The code was written by me as instructed by the course.
+
+The examples below outline the basic concepts of classe and object-oriented programming
+
+This and other projects I've worked on can be found on my github account: https://github.com/RobMulla
+"""
 
 # Instantiating My First Object
 
@@ -51,7 +62,7 @@ class Employee(object):
         self.hours = hours
         return hours * 20.00
 
-# Add your code below!
+# My Code below!
 class PartTimeEmployee(Employee):
     def calculate_wage(self, hours):
         self.hours = hours
